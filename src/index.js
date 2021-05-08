@@ -1,17 +1,36 @@
-import React from 'react';
+import { React, useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import Login from './login';
+import Register from './register';
+import Feed from './feed'
+import PrivateRoute  from "./protected_route";
+import history from './history';
+
+function Index(){
+
+  const [authenticated, setAuthenticated ] = useState(false);
+
+  return(
+    <div className="App">
+      <Switch>
+        <Route exact path="/" component={()=><Login setAuthenticated={setAuthenticated}/>} />
+        <PrivateRoute path="/home" authed={authenticated} component={()=><App setAuthenticated={setAuthenticated}/>}/>
+        <Route path="/register" component={Register} />
+        <PrivateRoute path="/feed" authed={authenticated} component={Feed} />  
+      </Switch>
+      </div>
+  
+  );
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <Router history={history}>
+    <Index></Index>
+  </Router>,
+  document.getElementById('root')
+)
+
