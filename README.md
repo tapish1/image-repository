@@ -1,71 +1,20 @@
-# Getting Started with Create React App
+## Steps to start the application:
+1) Clone application from github
+2) Cd into the api directory within the project in terminal/shell
+3) Run pip3 install -r requirements.txt (note the pip you use will depend on your python version) and then run pip freeze > requirements.txt
+To start the virtual environment for the server run python3 -m venv venv then source venv/bin/activate. If you’re using pc run python -m venv venv and venv\Scripts\activate instead
+4) To start the server run yarn start-api. If you get an error when doing this please set the FLASK_APP environment variable: export FLASK_APP=api.py and start the server again
+5) In a different terminal/shell cd into the project directory and install the dependencies using npm install
+6) Type yarn start to start the react application on [http://localhost:3000](http://localhost:3000)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# image-repository
+## How to use the applicatication:
+1) First create an account by clicking “here” in the Don’t have an account message
+2) Create an account by following the instructions on the screen. Note form validation is implemented.
+3) After registering click the login button and fill out your information to login
+4) If the correct email/password were entered you’ll be on the home screen (personal image repository)
+5) To upload an image click the “Upload an Image” button and fill out the appropriate information on the pop up screen. Note selecting the private checkbox will mean the image will not show up on the feed, but will still show up on your personal image repo.
+6) To delete images either click the “Delete All” button to delete all of them or select the checkbox under the images you’d like to delete and click the “Delete” button.
+7) Click Feed on the top left to go to a page where all public images from all the user’s can be seen. (Note there will be some images on there already from when I was testing)
+8) On both the Feed and home screens you can click on the image to enlarge it
+9) Click Personal on the top left to go back to your personal repository
+10) Click the “Sign Out” button to log out (you will no longer be able to access the feed or home screens until you log back in) 
